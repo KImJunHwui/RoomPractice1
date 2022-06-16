@@ -1,5 +1,6 @@
 package com.kim.roompractice1.adapters
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
@@ -16,6 +17,7 @@ class RoomAdapter(
 
     val inflate = LayoutInflater.from(mContext)
 
+    @SuppressLint("SetTextI18n")
     override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
 
         var tempRow = convertView
@@ -36,7 +38,7 @@ class RoomAdapter(
 
 
         priceTxt.text = roomData.getFormmatedPrice()
-        addressAndFloorTxt.text = "${roomData.address}, ${roomData.floor}"
+        addressAndFloorTxt.text = "${roomData.address}, ${roomData.getFormmatedFloor()}"
         descriptionTxt.text = roomData.description
 
         return row
