@@ -3,13 +3,15 @@ package com.kim.roompractice1.datas
 import android.icu.text.NumberFormat
 import android.os.Build
 import androidx.annotation.RequiresApi
+import java.io.Serializable
 import java.util.*
 
+// 룸클래스 생성 -> 가격, 주소, 계단, 세부사항 변수 지정
 class Room(
     val price : Int,
     val address : String,
     val floor : Int,
-    val description : String) {
+    val description : String) : Serializable{
 
     @RequiresApi(Build.VERSION_CODES.N)
     fun getFormmatedPrice() : String {

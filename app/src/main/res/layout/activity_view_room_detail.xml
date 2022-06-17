@@ -6,13 +6,13 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".ViewRoomDetailActivity">
-
+    // 세부 내용에 대한 UI 설정
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="250dp"
         android:src="@mipmap/ic_launcher"
         android:scaleType="centerCrop"/>
-
+// 레이어 아웃 설정하여 대문 글자 작성
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -21,18 +21,20 @@
         android:orientation="vertical">
 
     <TextView
+        android:id="@+id/priceTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="월세 3억 4,000"/>
 
     <TextView
+        android:id="@+id/descriptionTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="이방은 그방이다"/>
 
 
     </LinearLayout>
-
+// 선 TextView는 전체 리니어 아웃에 적용
     <TextView
         android:layout_width="match_parent"
         android:layout_height="1dp"
@@ -55,6 +57,7 @@
             android:layout_weight="1" />
 
         <TextView
+            android:id="@+id/floorTxt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="반지하"
@@ -86,6 +89,7 @@
             android:layout_weight="1" />
 
         <TextView
+            android:id="@+id/addressTxt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="서울시 동대문구"
